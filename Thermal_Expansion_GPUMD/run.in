@@ -1,0 +1,10 @@
+potential  nep.txt 
+#minimize fire 1e-5 1000 1
+# NPT setting: temperature, pressure need to set.
+velocity   temperature
+ensemble npt_mttk temp temperature temperature aniso pressure pressure tperiod 100 pperiod 100
+time_step   1
+dump_thermo  1000
+dump_position 1000
+run        10000000  
+
