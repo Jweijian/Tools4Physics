@@ -8,7 +8,7 @@ for T in "${temperatures[@]}"; do
   for P in "${pressures[@]}"; do
     folder="T${T}_P${P}"
     mkdir -p "$folder"
-    cp run.in sub_gpumd.sh model.xyz "$folder"
+    cp run.in sub_gpumd.sh model.xyz nep.txt "$folder"
     sed -i "s/temperature/${T}/g" "$folder/run.in"
     sed -i "s/pressure/${P}/g" "$folder/run.in"
     cd $folder
